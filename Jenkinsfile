@@ -1,30 +1,20 @@
 pipeline {
-    agent any
+agent any
 
-    stages {
-
-        stage('Clone') {
-            steps {
-                echo 'Cloning repository...'
-            }
-        }
-
-        stage('Build') {
-            steps {
-                echo 'Building project...'
-            }
-        }
-
-        stage('Test') {
-            steps {
-                echo 'Testing project...'
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                echo 'Deploying project...'
-            }
+```
+stages {
+    stage('Build') {
+        steps {
+            sh 'javac CrudOperation.java'
         }
     }
+
+    stage('Run') {
+        steps {
+            sh 'echo 5 | java CrudOperation'
+        }
+    }
+}
+```
+
 }
