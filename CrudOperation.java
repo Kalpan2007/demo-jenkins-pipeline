@@ -2,7 +2,6 @@ import java.util.*;
 
 public class CrudOperation {
 
-```
 static class Student {
     int id;
     String name;
@@ -100,6 +99,5 @@ public static void main(String[] args) {
 
     sc.close();
 }
-```
 
 }
